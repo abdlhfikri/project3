@@ -26,8 +26,8 @@ type="button" data-bs-toggle="collapse" data-bstarget="#navbarNav" aria-controls
 id="navbarNav"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link
-active" aria-current="page" href="<?= base_url() ?>">Home</a>
+                        <a class="nav-link"
+href="<?= base_url() ?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -38,8 +38,8 @@ href="<?= base_url('about') ?>">About</a>
 href="<?= base_url('post') ?>">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"
-href="<?= base_url('contact') ?>">Contact</a>
+                        <a class="nav-link
+active" aria-current="page" href="<?= base_url('contact') ?>">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"

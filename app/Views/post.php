@@ -26,16 +26,16 @@ type="button" data-bs-toggle="collapse" data-bstarget="#navbarNav" aria-controls
 id="navbarNav"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link
-active" aria-current="page" href="<?= base_url() ?>">Home</a>
+                        <a class="nav-link"
+href="<?= base_url() ?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
 href="<?= base_url('about') ?>">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"
-href="<?= base_url('post') ?>">Blog</a>
+                        <a class="nav-link
+active" aria-current="page" href="<?= base_url('post') ?>">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -61,13 +61,27 @@ href="<?= base_url('faqs') ?>">FAQ</a>
                         <div class="card-body">
                             <h5 class="h5"><a
     href="/post/<?= $post['slug'] ?>"><?= $post['title'] ?></a></h5>
-    <p><?=
+                            <p><?=
     substr($post['content'], 0, 120) ?></p>
                         </div>
                     </div>
                 <?php endforeach ?>
             </div>
         </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 my-2 card">
+                    <div class="card-body">
+                        <h5 class="h5"><?= 
+            $post['title'] ?></h5>
+                <span><?= $post['author'] ?> | <?=
+            $post['created_at'] ?></span>
+                        <p><?=
+            $post['content'] ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
 </body>
 </html>
