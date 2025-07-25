@@ -10,13 +10,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bgdark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
             <a class="navbar-brand" href="<?=base_url() ?>">MyBlog</a>
-        <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarNav" ariacontrols="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarNav" ariacontrols="navbarNav" aria-expanded="false" aria-label="Toggle
+        navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse justify-contentbetween" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="<?=base_url('admin/post') ?>">Blog</a>
@@ -27,10 +28,10 @@
                         <a href="<?= base_url('admin/post/new') ?>" class="btn btn-primary mr-3">New Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('admin/setting') ?>">Setting</a>
+                        <a class="nav-link" href="<?= base_url('admin/setting') ?>">Setting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('auth/logout') ?>">Logout</a>
+                        <a class="nav-link" href="<?= base_url('auth/logout') ?>">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -57,20 +58,20 @@
                     <td><?= $post['id'] ?></td>
                     <td>
                         <strong><?= $post['title'] ?></strong><br>
-                        <small class="text-muted"><?=$post['created_at'] ?></small>
+                        <small class="text-muted"><?= $post['created_at'] ?></small>
                     </td>
                     <td>
                         <?php if($post['status'] === 'published'): ?>
-                            <small class="text-success"><?=$post['status'] ?></small>
+                            <small class="text-success"><?= $post['status'] ?></small>
                         <?php else: ?>
-                            <small class="text-muted"><?=$post['status'] ?></small>
+                            <small class="text-muted"><?= $post['status'] ?></small>
                         <?php endif ?>
                     </td>
                     <td>
                         <a href="<?=
-base_url('admin/post/'.$post['id'].'/preview') ?>" class="btn btn-sm btn-outlinesecondary" target="_blank">Preview</a>
+base_url('admin/post/'.$post['id'].'/preview') ?>" class="btn btn-sm btn-outline-secondary" target="_blank">Preview</a>
                         <a href="<?=
-base_url('admin/post/'.$post['id'].'/edit') ?>" class="btn btn-sm btn-outlinesecondary">Edit</a>
+base_url('admin/post/'.$post['id'].'/edit') ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                         <a href="#" data-href="<?=
 base_url('admin/post/'.$post['id'].'/delete') ?>" onclick="confirmToDelete(this)" class="btn btn-sm btn-outline-danger">Delete</a>
                     </td>
@@ -88,7 +89,7 @@ base_url('admin/post/'.$post['id'].'/delete') ?>" onclick="confirmToDelete(this)
                     </div>
                     <div class="modal-footer">
                         <a href="#" role="button" id="delete-button" class="btn btn-danger">Delete</a>
-                        <button type="button" class="btn btn-secondary" data-bsdismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
