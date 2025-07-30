@@ -16,7 +16,7 @@ class PostAdmin extends BaseController
                 echo view('admin/admin_post_list', $data);
     }
 
-//--------------------------------------------------------------
+    //--------------------------------------------------------------
 
     public function preview($id)
         {
