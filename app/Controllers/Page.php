@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Controllers;
+
+use App\Models\ModelBarang;
 class Page extends BaseController
 { 
+    public function __construct()
+    {
+        $ModelBarang = new ModelBarang();
+    }
     public function about()
     {
         echo view("about");

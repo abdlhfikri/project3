@@ -13,7 +13,15 @@ $routes->get('/blog', 'Page::blog');
 $routes->get('/blog_single', 'Page::blog_single');
 $routes->get('/checkout', 'Page::checkout');
 $routes->get('/product_single', 'Page::product_single');
-$routes->get('/shop', 'Page::shop');
+$routes->get('/shop', 'Shop::shop');
+// $routes->get('/shop/cek', 'Shop::cek');
+// $routes->group('cart', function($routes) {
+//     $routes->get('/', 'CartController::index');
+//     $routes->post('add', 'CartController::add');
+//     $routes->post('update/(:num)', 'CartController::update/$1');
+//     $routes->get('remove/(:num)', 'CartController::remove/$1');
+//     $routes->get('clear', 'CartController::clear');
+// });
 // $routes->get('/post/(:any)', 'Post::viewPost/$1');
 // $routes->group('admin', function($routes){
 //     $routes->get('post', 'PostAdmin::index');
